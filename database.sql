@@ -1,0 +1,11 @@
+CREATE TABLE userinfo(
+    uid INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(10) NOT NULL UNIQUE,
+    pwd VARCHAR(20) NOT NULL,
+    email VARCHAR(20) NOT NULL,
+    statement  VARCHAR(30),
+    reg_data DATE NOT NULL,
+    state INT NOT NULL DEFAULT 0,
+    power INT NOT NULL DEFAULT 0
+);
+
