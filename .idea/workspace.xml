@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="56288e7f-a307-4d13-9d1e-965b18e4d4f0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Dao/UserDao.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Model/Userinfo.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Param/UserParam.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Service/UserService.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tool/OrmEngine.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tool/RedisEngine.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tool/CheckLogin.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../MessageBoard/controller/HelloController.go" beforeDir="false" afterPath="$PROJECT_DIR$/../MessageBoard/controller/HelloController.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../MessageBoard/controller/UserController.go" beforeDir="false" afterPath="$PROJECT_DIR$/../MessageBoard/controller/UserController.go" afterDir="false" />
@@ -18,14 +13,11 @@
       <change beforePath="$PROJECT_DIR$/../MessageBoard/model/User.go" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../MessageBoard/service/UserService.go" beforeDir="false" afterPath="$PROJECT_DIR$/../MessageBoard/service/UserService.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../MessageBoard/tool/SqlEngine.go" beforeDir="false" afterPath="$PROJECT_DIR$/../MessageBoard/tool/SqlEngine.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Config/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/Config/app.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Controller/UserController.go" beforeDir="false" afterPath="$PROJECT_DIR$/Controller/UserController.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tool/Config.go" beforeDir="false" afterPath="$PROJECT_DIR$/Tool/Config.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dao/UserDao.go" beforeDir="false" afterPath="$PROJECT_DIR$/Dao/UserDao.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/Userinfo.go" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Userinfo.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Service/UserService.go" beforeDir="false" afterPath="$PROJECT_DIR$/Service/UserService.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../awesomeProject/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/../awesomeProject/main.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../study/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/../study/go.mod" afterDir="false" />
     </list>

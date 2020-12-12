@@ -9,21 +9,23 @@ type UserDao struct {
 	*Tool.Orm
 }
 
+
+//根据用户名查询表
+func (d *UserDao) QueryByName(name string) (*Model.Userinfo, error) {
+	userinfo := new(Model.Userinfo)
+	_, err := d.Where("name=?", name).Get(userinfo)
+	if err != nil {
+		return nil, err
+	}
+
+	return userinfo, nil
+}
+
+//更改用户状态
 func (d *UserDao) ChangeState(state int, name string) error {
 	user := Model.Userinfo{State: state}
 	_, err :=d.Where("name = ?", name).Update(&user)
 	return err
-}
-
-//查询用户状态
-func (d *UserDao) FindState(name string) (int, error) {
-	userinfo := new(Model.Userinfo)
-	_, err := d.Where("name=?", name).Get(userinfo)
-	if err != nil {
-		return -1, err
-	}
-
-	return userinfo.State, nil
 }
 
 //未激活注册

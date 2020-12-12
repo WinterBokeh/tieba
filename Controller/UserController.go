@@ -5,8 +5,11 @@ import (
 	"Tieba/Param"
 	"Tieba/Service"
 	"Tieba/Tool"
+	"crypto/md5"
+	"encoding/hex"
 	"fmt"
 	"github.com/gin-gonic/gin"
+	"strconv"
 	"time"
 )
 
@@ -17,6 +20,65 @@ type UserController struct {
 func (u *UserController) Router(engine *gin.Engine) {
 	engine.POST("/register", u.register)
 	engine.GET("/code/:name", u.judgeCode)
+	engine.POST("/login", u.login)
+	engine.GET("/logout", u.logout)
+}
+
+func (u *UserController) logout(ctx *gin.Context) {
+	value := Tool.CheckLogin(ctx)
+	if value == "" {
+		Tool.Failed(ctx, "未登录")
+		return
+	}
+
+	redisConn := Tool.GetRedisConn()
+	redisConn.Del("isLogin")
+	Tool.Success(ctx, "退出登录成功")
+}
+
+//登录
+func (u *UserController) login(ctx *gin.Context) {
+	name := ctx.PostForm("name")
+	pwd := ctx.PostForm("pwd")
+
+	//未验证
+	us := Service.UserService{}
+	state, err := us.GetUserState(name)
+	if err != nil {
+		fmt.Println("GetUserStateErr: ", err)
+		Tool.Failed(ctx, "服务器错误")
+		return
+	}
+
+	if state == 0 {
+		Tool.Failed(ctx, "该账号未激活或不存在")
+		return
+	}
+
+	//已经处于登录状态
+	isLogin := Tool.CheckLogin(ctx)
+	if isLogin != "" {
+		Tool.Failed(ctx, "您已经处于登录状态，无需再次登录")
+		return
+	}
+
+	//愉快登录
+	flag, err := us.Login(name, pwd)
+	if err != nil {
+		fmt.Println("loginErr:", err)
+		Tool.Failed(ctx, "服务器错误")
+		return
+	}
+
+	if flag == false {
+		Tool.Failed(ctx, "密码错误")
+		return
+	}
+
+	redisConn := Tool.GetRedisConn()
+	redisConn.Set("isLogin", name, time.Hour)
+
+	Tool.Success(ctx, "登陆成功，有效期一小时")
 }
 
 //验证验证码
@@ -89,8 +151,15 @@ func (u *UserController) register(ctx *gin.Context) {
 	user.RegDate = time.Now()
 	user.Email = userParam.Email
 	user.Name = userParam.Username
-	user.Pwd = userParam.Pwd
+//	user.Pwd = userParam.Pwd
 	user.Statement = userParam.Statement
+	user.Salt = strconv.FormatInt(time.Now().Unix(), 10)
+// 撒盐
+	m5 := md5.New()
+	m5.Write([]byte(userParam.Pwd))
+	m5.Write([]byte(user.Salt))
+	st := m5.Sum(nil)
+	user.Pwd = hex.EncodeToString(st)
 
 	err = us.Register(user)
 	if err != nil {
