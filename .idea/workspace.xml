@@ -2,30 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="56288e7f-a307-4d13-9d1e-965b18e4d4f0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/src.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../MessageBoard/controller/HelloController.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../MessageBoard/controller/UserController.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../MessageBoard/dao/UserDao.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../MessageBoard/go.mod" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../MessageBoard/go.sum" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../MessageBoard/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../MessageBoard/service/UserService.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../MessageBoard/tool/SqlEngine.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Config/app.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Controller/HelloController.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Controller/UserController.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tool/Config.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tool/JsonParse.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tool/JsonPutOut.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../awesomeProject/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../study/go.mod" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../test/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dao/UserDao.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Model/Userinfo.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Param/UserParam.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Service/UserService.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tool/OrmEngine.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tool/RedisEngine.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MessageBoard/controller/HelloController.go" beforeDir="false" afterPath="$PROJECT_DIR$/../MessageBoard/controller/HelloController.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MessageBoard/controller/UserController.go" beforeDir="false" afterPath="$PROJECT_DIR$/../MessageBoard/controller/UserController.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MessageBoard/dao/UserDao.go" beforeDir="false" afterPath="$PROJECT_DIR$/../MessageBoard/dao/UserDao.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MessageBoard/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/../MessageBoard/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MessageBoard/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/../MessageBoard/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MessageBoard/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/../MessageBoard/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MessageBoard/model/User.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MessageBoard/service/UserService.go" beforeDir="false" afterPath="$PROJECT_DIR$/../MessageBoard/service/UserService.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MessageBoard/tool/SqlEngine.go" beforeDir="false" afterPath="$PROJECT_DIR$/../MessageBoard/tool/SqlEngine.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Config/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/Config/app.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controller/UserController.go" beforeDir="false" afterPath="$PROJECT_DIR$/Controller/UserController.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tool/Config.go" beforeDir="false" afterPath="$PROJECT_DIR$/Tool/Config.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../awesomeProject/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/../awesomeProject/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../study/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/../study/go.mod" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +43,10 @@
   </component>
   <component name="GOROOT" url="file://$PROJECT_DIR$/../../../../../../Go" />
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GoLibraries">
+    <option name="indexEntireGoPath" value="false" />
   </component>
   <component name="ProjectId" id="1lNAQvyddbXj6r90hmww7hwgKcu" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -59,6 +64,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
+    <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
     <property name="last_opened_file_path" value="$USER_HOME$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -66,6 +72,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="restartRequiresConfirmation" value="false" />
   </component>
   <component name="RunManager">
     <configuration name="go build Tieba" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
@@ -101,5 +108,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="VgoProject">
+    <integration-enabled>true</integration-enabled>
   </component>
 </project>
