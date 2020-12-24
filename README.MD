@@ -20,6 +20,6 @@
   - 使用jwt存储用户信息，降低服务器数据库查询次数
   - 由于没有前端可以甩锅，postman要每次手动输token（很麻烦的方法）
   - 改用RESTful api风格
-  - 添加**后端接口文档**
+  - 添加[**后端接口文档**](https://github.com/WinterBokeh/tieba/blob/master/document.md)
   - 使用refreshToken刷新token，避免频繁登录
   - 用户模块的设计参考了各大网站
