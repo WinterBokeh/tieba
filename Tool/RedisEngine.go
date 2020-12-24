@@ -1,8 +1,6 @@
 package Tool
 
-import (
-	"github.com/go-redis/redis"
-)
+import "github.com/go-redis/redis/v8"
 
 var RedisConn *redis.Client
 

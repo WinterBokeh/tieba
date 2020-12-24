@@ -12,6 +12,11 @@ type Config struct {
 	Database DatabaseConfig `json:"database"`
 	Email    EmailConfig    `json:"email"`
 	Redis    RedisConfig    `json:"redis"`
+	Jwt      JwtCfg         `json:"jwt"`
+}
+
+type JwtCfg struct {
+	SigningKey string `json:"signing_key"`
 }
 
 type RedisConfig struct {

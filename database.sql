@@ -9,3 +9,28 @@ CREATE TABLE userinfo(
     power INT NOT NULL DEFAULT 0
 );
 
+#include <iostream>
+using namespace std;
+
+int Sum(int n) {
+	int sum = 0;
+	for (int i = 1; i <= n; ++i) {
+		sum += i;
+	}
+	return sum;
+}
+
+int Sub(int n) {
+	int sum = 1;
+	for (int i = 1; i <= n; ++i) {
+		sum *= i;
+	}
+	return sum;
+}
+
+int main() {
+	int n;
+	cin >> n;
+	cout << Sum(n) << endl;
+	cout << Sub(n);
+}

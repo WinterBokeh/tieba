@@ -9,7 +9,5 @@ type Userinfo struct {
 	Email     string    `xorm:"varchar(20)" json:"email"`
 	RegDate   time.Time `xorm:"date" json:"reg_date"`
 	Statement string    `xorm:"varchar(30)" json:"statement"`
-	State     int       `xorm:"int" json:"state"`
-	Power     int       `xorm:"int" json:"power"`
 	Salt      string    `xorm:"varchar(10)" json:"salt"`
 }

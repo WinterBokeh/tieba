@@ -17,4 +17,5 @@ func (h *HelloController) Router(engine *gin.Engine)  {
 func (h *HelloController) hello(ctx *gin.Context) {
 	fmt.Println("HelloTieba")
 	ctx.String(200, "HelloTieba")
+
 }

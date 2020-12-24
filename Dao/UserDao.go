@@ -21,14 +21,13 @@ func (d *UserDao) QueryByName(name string) (*Model.Userinfo, error) {
 	return userinfo, nil
 }
 
-//更改用户状态
-func (d *UserDao) ChangeState(state int, name string) error {
-	user := Model.Userinfo{State: state}
-	_, err :=d.Where("name = ?", name).Update(&user)
+//更新用户字段通过用户名
+func (d *UserDao) Update(username string, userinfo Model.Userinfo) error {
+	_, err := d.Where("name = ?", username).Update(&userinfo)
 	return err
 }
 
-//未激活注册
+//注册
 func (d *UserDao) Register(userinfo Model.Userinfo) error {
 	_, err := d.InsertOne(&userinfo)
 	return err

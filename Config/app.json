@@ -22,5 +22,8 @@
     "port": "6379",
     "password": "",
     "db": 0
+  },
+  "jwt": {
+    "signing_key": "testForNowHaha"
   }
 }
